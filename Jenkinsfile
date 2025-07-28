@@ -75,7 +75,7 @@ pipeline {
 
                         gcloud compute ssh gui_s@${GCP_INSTANCE} \\
                         --zone=${GCP_ZONE} --quiet \\
-                        --command "cd ~/car-rental-app && docker compose pull car-rental-orchestrator && docker compose up -d --no-deps --force-recreate $APP_NAME"
+                        --command "cd ~/car-rental-app && docker compose pull car-rental-config-server && docker compose up -d --no-deps --force-recreate $APP_NAME"
                     '''
                 }
             }
